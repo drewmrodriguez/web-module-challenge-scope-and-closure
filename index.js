@@ -27,12 +27,20 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
+ *    
+ *    Both counters add 1 to the declared variable 0, but counter1 is in a local scope while counter2 is taking the variable from the global scope.
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *    counter1 uses a closure because the function is within the curly braces of the function.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
-*/
+ *      
+ *     counter1 is perferable when you want variables and functions to be nested only within a local scope while counter2 is preferbale when you have a value or whatever it may be to be referenced in multiple different scopes.  
+ * 
+*/    
+
+
 
 // counter1 code
 function counterMaker() {
