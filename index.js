@@ -28,15 +28,16 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  *    
- *    Both counters add 1 to the declared variable 0, but counter1 is in a local scope while counter2 is taking the variable from the global scope.
+ *    counter1 has a variable in the local scope while counter2 has a variable in the global scope.
  * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
- *    counter1 uses a closure because the function is within the curly braces of the function.
+ *    counter1 uses a closure because it has a variable nested in the lexical environment.
  * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *      
- *     counter1 is perferable when you want variables and functions to be nested only within a local scope while counter2 is preferbale when you have a value or whatever it may be to be referenced in multiple different scopes.  
+ *    counter1 is perferable when you want to call the function multiple times, and counter2 is preferable if you're only calling that function once.
+ * 
  * 
 */    
 
@@ -64,11 +65,14 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
+  return(Math.floor(Math.random() * 3));
 
 }
+
+  console.log(inning());
+
 
 /* Task 3: finalScore()
 
@@ -84,9 +88,9 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(){
 
-  /*Code Here*/
+  
 
 }
 
@@ -111,8 +115,8 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard() {
+  
 }
 
 
